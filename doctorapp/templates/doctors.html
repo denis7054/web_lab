@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/doctors.css')}}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+	<h1>Выберите врача</h1>
+	<div class="search-bar">
+		<input type="text" placeholder="Найти врача" maxlength="64">
+		<button id="btn-search">Поиск</button>
+	</div>
+	<div class="filter">
+		<h3>Фильтр:</h3>
+		<h4>Пол</h4>
+		<label><input type="radio" checked="checked">Мужской</label>
+		<br>
+		<label><input type="radio">Женский</label>
+		<br><br>
+		<h4>Врачи</h4>
+		<label><input type="checkbox" checked="checked">Терапевт</label>
+		<br>
+		<label><input type="checkbox" checked="checked">Педиатр</label>
+		<br>
+		<label><input type="checkbox" checked="checked">Офтальмолог</label>
+		<br>
+		<label><input type="checkbox" checked="checked">Невролог</label>
+		<br>
+		<label><input type="checkbox" checked="checked">Стоматолог</label>
+		<br>
+		<label><input type="checkbox" checked="checked">Онколог</label>
+		<br>
+		<label><input type="checkbox" checked="checked">Дерматолог</label>
+		<br>
+	</div>
+	<div class="doctors-block">
+		<div class="doctors-list">
+			<img class="image" src="static/images/doctor_1.jpg">
+			<div class="doctor">
+				<h3>Валеев Марат Мазгарович</h3>
+				<h4>Терапевт</h4>
+				<p>Валеев Марат Мазгарович, Уфа: кистевой хирург, ортопед, травматолог, 680 отзывов пациентов, места работы, доктор наук, высшая категория, стаж 40 лет, запись на приём ☎ (347) 200-89-21.</p>
+				<button id="btn-signup">Записаться</button>
+			</div>	
+	</div>
+		<div class="doctors-list">
+			<img class="image" src="static/images/doctor_2.jpg">
+			<div class="doctor">
+				<h3>Байрамова Юлия Геннадиевна</h3>
+				<h4>Стоматолог</h4>
+				<p>Байрамова Юлия Геннадиевна, Уфа: врач узи, гинеколог, терапевт, 97 отзывов пациентов, места работы, высшая категория, стаж 27 лет, запись на приём ☎ (347) 200-92-56.</p>
+				<button id="btn-signup">Записаться</button>
+			</div>	
+		</div>
+		<div class="doctors-list">
+			<img class="image" src="static/images/doctor_3.jpg">
+			<div class="doctor">
+				<h3>Габидуллин Ильдар Радикович</h3>
+				<h4>Офтальмолог</h4>
+				<p>Габидуллин Ильдар Радикович, Уфа: проктолог (колопроктолог), хирург, гнойный хирург, 69 отзывов пациентов, места работы, высшая категория, стаж 14 лет, запись на приём ☎ (347) 211-95-23.</p>
+				<button id="btn-signup">Записаться</button>
+			</div>	
+		</div>
+		<div class="doctors-list">
+			<img class="image" src="static/images/doctor_4.jpg">
+			<div class="doctor">
+				<h3>Ибрагимов Денис Радикович</h3>
+				<h4>Педиатр</h4>
+				<p>Ибрагимов Денис Радикович, Уфа: сосудистый хирург, флеболог, 52 отзыва пациентов, места работы, кандидат наук, 1 категория, стаж 11 лет, запись на приём ☎ (347) 211-92-15.</p>
+				<button id="btn-signup">Записаться</button>
+			</div>	
+		</div>
+	</div>
+</div>
+{% endblock %}
+

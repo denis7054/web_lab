@@ -1,0 +1,199 @@
+body {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+
+	margin: 0;
+}
+
+
+
+header {
+	padding: 20px 0;
+}
+
+.header-line {
+	padding-top: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.nav-item {
+	color: #ff4f00;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;
+	
+	margin-right: 25px;
+}
+
+#nav-selected {
+	color: #008080;
+}
+
+
+
+.nav-item:hover {
+	color: #000000;
+}
+
+.num {
+	color: #ff4f00;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.phone-text {
+	color: #ff4f00;
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.phone-holder {
+	display: flex;
+	align-items: center;
+
+}
+		
+h1{
+	color: #008080;
+	font-size: 30px;
+}
+
+.banner-desc p{
+	color: #ff4f00;
+	font-size: 20px;
+
+}
+
+.button1 {
+	background-color: #ff4f00;
+	color: #fff;
+	width: 120px;
+	height: 50px;
+	border-radius: 10px;
+	border:none;
+	margin-right: 10px;
+}
+
+.button1:hover{
+	background-color: #963102;
+}
+.button2 {
+	background-color: #008080;
+	color: #fff;
+	margin-left: 10px;
+	width: 120px;
+
+	height: 50px;
+	border-radius: 10px;
+
+	border:none;
+}
+
+.button2:hover{
+	background-color: #014444;
+}
+
+.banner-image {
+	height: 600px;
+} 
+
+
+
+.banner-desc{
+	display: flex;
+	flex-direction: column;
+	margin-left: 100px;
+	margin-right: 250px;
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+}
+
+#footer-logo {
+	float: right;
+	margin-top: 20px;
+	font-size: 10px;
+	text-align: right;
+}
+
+#social {
+	float: left;
+	margin-left: 20px;
+	width: 130px;
+}
+
+.social-icon {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.twitter {
+	background: url(../images/twitter.png);
+	background-position: 0 0;
+}
+
+.google {
+	background: url(../images/google.png);
+	background-position: -30px 0;
+}
+
+.footer {
+	display: flex;
+	flex-direction:row;
+	background: #ff4f00;
+	text-align: center;
+}
+#footer-logo {
+	margin-left: 50px;
+	margin-bottom:10px;
+}
+#social {
+	color: white;
+	margin-left: 50px;
+}
+.text-info  {
+	color: #ffffff;
+	font-size: 16px;
+	margin-left: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.fade-out {
+	animation-name: fadeOut;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+@keyframes fadeOut {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+.fade-in {
+	animation-name: fadeIn;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}

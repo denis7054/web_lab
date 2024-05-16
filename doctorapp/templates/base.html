@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }} - Pediatric feeding</title>
+
+    {% block style %}{% endblock %}
+
+</head>
+
+
+<body>
+  
+    <div class='header-line'>
+        <div class='header-logo'>
+            <img src="static/images/logo.png" alt="">
+        </div>  
+
+        <div class='nav'>
+            {% for item in navmenu %}          
+                        <!-- Проверяем, соответствует ли адрес текущему адресу запроса и добавляем класс active -->
+                <a href="{{ item.adres }}" class="nav-item" {% if item.adres == request.path %}id='nav-selected'{% endif %}>{{ item.name }}</a>
+                             
+            {% endfor %}    
+        </div>    
+
+
+        <div class='phone'>
+            <div class='phone-holder'>
+                <div class='phone-img'>
+                    <img  src="static/images/phone.png" width="25" height="25" alt="">
+                </div>
+        
+                <div class='number'> 
+                    <a class='num' href='#'>+8-800-555-35-35</a>
+                </div>
+            </div>   
+            <div class='phone-text'>
+                Свяжитесь с нами
+            </div>       
+        </div>           
+    </div>
+
+
+
+    {% block content %}{% endblock %}
+
+    {% block all_requests %}{% endblock %}
+
+
+    <footer class="footer">
+		<div id="footer-logo">
+			<a href="/"><img src="static/images/footer-logo.png" alt="">
+			</a>
+		</div>
+		<div id="social">
+			<h3>SOCIAL NETWORKS</h3>
+			<a href="http://twitter.com/" class="social-icon twitter"></a>
+			<a href="http://google.com/" class="social-icon google"></a>
+		</div>	
+		<div class="text-info">
+			<p>© Pediatric feeding 2003-2024. Информация на сайте не является публичной офертой.</p>
+		</div>	
+	</footer>
+    <script src="static/js/main.js"></script>
+
+
+
+    {% block scripts %}{% endblock %}
+</body>
+
+
+
+</html>

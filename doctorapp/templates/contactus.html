@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contactus.css')}}">
+{% endblock %}
+
+
+{% block content %}
+	<section class="contactus" id="contact">
+		<div class="container">	
+			<div class="main-title">
+				<h2>Свяжитесь с нами</h2>
+			</div>		
+			<div class="row">
+				<div class="col-md-4">
+					<div class="icon-box"><i class="fa fa-phone"></i></div>
+						<h3>Позвоните нам</h3>
+						<p>(800) 123 123 124 <br />
+						(800) 234 456 456 <br /></p>
+				</div>				
+				<div class="col-md-4">
+					<div class="icon-box"><i class="fa fa-map-marker"></i></div>
+						<h3>Местоположение</h3>
+						<p>г. Уфа, ул. Карла Маркса 12 <br />
+						г. Уфа, ул. Заки Валиди 9</p>
+				</div>		
+				<div class="col-md-4">
+					<div class="icon-box"><i class="fa fa-clock-o"></i></div>	
+						<h3>График работы</h3>
+						<p>С 9:00 до 12:00 и  14:00 до 17:00<br />
+						Понедельник - Пятница</p>
+				</div>
+			</div>		
+			<div class="contact-form">
+				<form>
+					<div class="form-group">
+						<input type="text" name = "firstname" class="form-control" placeholder="Введите ФИО" />
+					</div>			
+					<div class="form-group">
+						<input type="text" name = "femail" class="form-control" placeholder="Введите почту" />
+					</div>			
+					<div class="form-group">
+						<input type="text" name = "fnum" class="form-control" placeholder="Введите телефон" />
+					</div>			
+					<div class="form-group">
+						<input type ="text" name = "mess" class="form-control" placeholder="Опишите проблему или задайте вопрос"/>
+					</div>					
+					<div class="messag">
+						<input type="submit" id = "btn-send"value="Отправить" class="btn-custom" />
+					</div>
+				</form>
+
+				<div class="request-status">
+					<h2>Статус вашего запроса</h2>
+					<p id="statusfield"></p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block all_requests %}
+<div class="all_requests">
+        <p id="allreqs">Все запросы:</p>
+        <ul>
+            {% for table_name, entries in all_reqs.items() %}
+<!--                <li>{{ table_name }}</li>-->
+                <ul>
+                    {% for entry in entries %}
+                        <li>Запросов всего: {{ entry.name }} : {{ entry.seq }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="static/js/main.js"></script>
+<script src="static/js/formsend.js"></script>
+{% endblock %}

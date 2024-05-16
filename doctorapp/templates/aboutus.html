@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aboutus.css')}}">
+<script type="text/javascript" src="static/js/jquery-3.7.1.min.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<section class="aboutus" id="aboutus">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-desc">
+                    
+                    <div class="hidebox">
+                    <h3 header-why-need>Почему педиатрическое питание</h3>
+                    
+                    <p>
+                        Lorem Ipsum — это просто текст-пустышка полиграфической и наборной индустрии. Lorem Ipsum был 
+                        стандартным текстом-пустышкой в отрасли с 1500-х годов, когда неизвестный типограф взял гранку 
+                        шрифтов и переделал ее, чтобы сделать книгу образцов шрифтов.
+                        Lorem Ipsum — это просто текст-пустышка полиграфической и наборной индустрии. Лорем Ипсум был.</p>
+                    </div>
+                        
+            
+            
+                        
+                                
+                    <div class="reasons">
+                        <h3>Причины выбрать нас</h3>
+                        <div class="reason">
+                            <h5>01</h5>
+                            <p>Превосходство в здравоохранении</p>
+                        </div>
+                        <div class="reason">
+                            <h5>02</h5>
+                            <p>Страсть к исцелению</p>
+                        </div>
+                        <div class="reason">
+                            <h5>03</h5>
+                            <p>Новейшие и проверенные технологии</p>
+                        </div>
+                    </div>
+                
+                </div>
+                <figure> 
+                    <img src="static/images/about.png" alt="">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="static/js/script.js"></script>
+{% endblock %}
+
